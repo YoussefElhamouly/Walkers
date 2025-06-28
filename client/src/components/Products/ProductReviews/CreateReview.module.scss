@@ -8,12 +8,29 @@
   flex-direction: column;
   gap: 1.2rem;
   width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
 }
 
 .starsLabel {
   font-weight: 600;
   color: var(--color-text-main);
   margin-bottom: 0.3rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 }
 
 .starsInput {
@@ -21,6 +38,15 @@
   gap: 0.3rem;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+    gap: 0.2rem;
+  }
 }
 
 .star {
@@ -41,16 +67,45 @@
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 0.8rem;
-  font-size: 1.05rem;
+  box-sizing: border-box;
+  font-size: 1rem;
   resize: vertical;
   color: var(--color-text-main);
   background: #fafbfc;
+  outline: none;
+  max-height: 300px;
+
+  &::placeholder {
+    opacity: 0.5;
+    color: var(--color-text-main);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    min-height: 70px;
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 60px;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
 }
 
 .error {
   color: #e53935;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 }
 
 .submitBtn {
@@ -64,6 +119,17 @@
   cursor: pointer;
   transition: background 0.2s;
   margin-top: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
 }
 
 .submitBtn:hover {

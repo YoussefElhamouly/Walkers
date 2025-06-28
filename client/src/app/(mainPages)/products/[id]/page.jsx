@@ -1,6 +1,7 @@
 import styles from './ProductPage.module.scss';
 import ProductGallery from '@/components/Products/Productgallery/ProductGallery';
 import ProductVariants from '@/components/Products/ProductVariants/ProductVariants';
+import SizeSelector from '@/components/Products/ProductVariants/SizeSelector';
 import Button from '@/components/ui/Button/Button';
 import { notFound } from 'next/navigation';
 import UserReviews from '@/components/Products/ProductReviews/UserReviews';
@@ -77,6 +78,7 @@ export default async function ProductPage({
           </div>
           <p className={styles.description}>{product.description}</p>
           <ProductVariants gallery={product.gallery} productId={product._id} />
+          <SizeSelector />
           <div className={styles.buttonRow}>
             <Button customStyles={styles.addToCart} size="lg">
               Add to Cart

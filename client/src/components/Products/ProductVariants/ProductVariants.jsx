@@ -7,6 +7,7 @@ export default function ProductVariants({ gallery, productId }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const variantParam = searchParams.get('variant');
+  const sizeParam = searchParams.get('size');
   const [isLoading, setIsLoading] = useState(false);
   const selectedVariant = gallery.findIndex(
     (v) =>
@@ -18,6 +19,24 @@ export default function ProductVariants({ gallery, productId }) {
   useEffect(() => {
     setIsLoading(false);
   }, [variantParam]);
+
+  const handleVariantClick = (variant) => {
+    setIsLoading(true);
+
+    // Create new URLSearchParams object
+    const newSearchParams = new URLSearchParams(searchParams);
+
+    // Update the variant parameter
+    newSearchParams.set('variant', variant);
+
+    // Preserve the size parameter if it exists
+    if (sizeParam) {
+      newSearchParams.set('size', sizeParam);
+    }
+
+    // Replace the current URL with the new search params
+    router.replace(`?${newSearchParams.toString()}`);
+  };
 
   return (
     <div className={styles.variantSection}>
@@ -32,10 +51,7 @@ export default function ProductVariants({ gallery, productId }) {
             className={`${styles.variantBtn} ${selectedVariant === idx ? styles.active : ''}`}
             aria-label={variant.variant}
             type="button"
-            onClick={() => {
-              setIsLoading(true);
-              router.replace(`?variant=${encodeURIComponent(variant.variant)}`);
-            }}
+            onClick={() => handleVariantClick(variant.variant)}
             style={{ cursor: 'pointer' }}
           >
             <img
