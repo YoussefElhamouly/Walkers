@@ -64,19 +64,16 @@ walker/
   <img src="./assets/homepage.png" alt="Homepage" width="600"/>
 </p>
 <p align="center">
+  <img src="./assets/footer.png" alt="Checkout" width="600"/>
+</p>
+<p align="center">
   <img src="./assets/products.png" alt="Products" width="600"/>
-</p>
-<p align="center">
-  <img src="./assets/cart.png" alt="Shopping Cart" width="600"/>
-</p>
-<p align="center">
-  <img src="./assets/admin-dashboard.png" alt="Admin Dashboard" width="600"/>
 </p>
 <p align="center">
   <img src="./assets/product-detail.png" alt="Product Detail" width="600"/>
 </p>
 <p align="center">
-  <img src="./assets/checkout.png" alt="Checkout" width="600"/>
+  <img src="./assets/cart.png" alt="Shopping Cart" width="600"/>
 </p>
 
 ---
