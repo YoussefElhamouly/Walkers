@@ -1,0 +1,139 @@
+.checkoutPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.billingCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px;
+  width: 700px;
+  margin-right: 32px;
+}
+
+.orderCard {
+  min-width: 350px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px;
+  height: fit-content;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  // Make the custom dropdown full width and consistent with inputs
+  :global(.dropdown) {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  :global(.dropdown .toggle) {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #fafbfc;
+    color: #222;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  :global(.dropdown .toggle:focus) {
+    outline: none;
+    border-color: #bdbdbd;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input,
+.select,
+.textarea,
+.dropdown {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fafbfc;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus,
+.dropdown:focus-within {
+  outline: none;
+  border-color: #bdbdbd;
+}
+
+.textarea {
+  min-height: 80px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summaryTotal {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.placeOrderBtn {
+  width: 100%;
+  padding: 12px 0;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.deliveryReturn {
+  margin-top: 24px;
+}
+
+.deliveryReturn h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.deliveryReturn div {
+  font-size: 14px;
+  color: #222;
+  margin: 8px 0;
+}

@@ -1,0 +1,142 @@
+.footer {
+  background: #18191a;
+  color: #fff;
+  font-size: 1rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.col {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.col a {
+  color: #e0e7ef;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.col a:hover {
+  color: #fff;
+}
+
+.socialAndFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+}
+.socials a {
+  color: #e0e7ef;
+  transition: color 0.2s;
+}
+.socials a:hover {
+  color: #fff;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #e0e7ef;
+}
+.features i {
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+.bottom {
+  background: #111213;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.logoImg {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+}
+.brandName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.copyright {
+  font-size: 0.97rem;
+  color: #e0e7ef;
+}
+
+.mapWrapper {
+  margin-top: -1rem;
+  width: 400px;
+  height: 220px;
+  // flex: 1 1 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+@media (max-width: 900px) {
+  .columnsAndMap {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .mapWrapper {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .map {
+    min-width: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.createReview {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.starsLabel {
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.3rem;
+}
+
+.starsInput {
+  display: flex;
+  gap: 0.3rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.starActive {
+  color: #f5c518;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1.05rem;
+  resize: vertical;
+  color: var(--color-text-main);
+  background: #fafbfc;
+}
+
+.error {
+  color: #e53935;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.submitBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  background: #444;
+}

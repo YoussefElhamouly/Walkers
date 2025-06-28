@@ -1,0 +1,123 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.toggle {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    border 0.15s,
+    background 0.15s;
+  font-weight: 500;
+
+  &:hover {
+    border-color: #a3a3a3;
+    background: #f3f4f6;
+  }
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  font-size: 1em;
+  color: #888;
+  transition: transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  margin: 0;
+  padding: 0.2rem 0;
+  list-style: none;
+  max-height: 220px;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  opacity: 0;
+  transform: translateY(-8px);
+  visibility: hidden;
+  transition: all 0.13s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f3f4f6;
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+  }
+}
+
+.option {
+  // width: 100%;
+  width: 80%;
+  margin: 0px auto;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #222;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  transition:
+    background 0.1s,
+    color 0.1s;
+  text-align: left;
+  white-space: nowrap;
+  // overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover,
+  &:focus {
+    background: #f3f4f6;
+    color: #111;
+  }
+}
+
+.selected {
+  background: #e5e7eb;
+  color: #111;
+  font-weight: 600;
+}

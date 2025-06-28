@@ -1,0 +1,111 @@
+.hero {
+  width: 100%;
+  height: 680px;
+  background: linear-gradient(120deg, #18191a 80%, #232325 100%);
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  padding: 0rem;
+  gap: 15rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  //   padding-bottom: 7rem;
+}
+.heroContent {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  padding-left: 3rem;
+  z-index: 2;
+}
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+}
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: #e0e7ef;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+
+  //   font-weight: 400;
+}
+.heroButton {
+  margin-top: 2rem;
+  width: fit-content;
+  background: #fff !important;
+  color: #18191a !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.heroButton:hover {
+  background: #e0e7ef !important;
+  color: #18191a !important;
+}
+.heroImage {
+  width: 320px;
+  max-width: 100%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  align-self: end;
+  //   filter: brightness(0.95) contrast(1.1);
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.18;
+  z-index: 1;
+}
+.saleBanner {
+  //   position: absolute;
+  width: fit-content;
+  top: 2.5rem;
+  left: 3rem;
+  background: #ffb300;
+  color: #18191a;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 0.6rem 2.2rem;
+  padding-right: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  letter-spacing: 1px;
+}
+
+.shapeDivider {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.shapeDivider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 124px;
+  fill: white;
+}
+
+.shapeDivider .shape-fill {
+  fill: white;
+}

@@ -1,0 +1,146 @@
+// .brandSection {
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 3rem 0 2rem 0;
+//   text-align: center;
+// }
+// .brandTitle {
+//   font-size: 2rem;
+//   font-weight: 700;
+//   color: #222;
+//   margin-bottom: 2.5rem;
+// }
+// .brandCarousel {
+//   display: flex;
+//   gap: 2rem;
+//   overflow-x: auto;
+//   justify-content: center;
+//   align-items: center;
+//   padding-bottom: 1rem;
+//   scrollbar-width: thin;
+//   scrollbar-color: #e0e7ef #fff;
+// }
+// .brandCarousel::-webkit-scrollbar {
+//   height: 8px;
+// }
+// .brandCarousel::-webkit-scrollbar-thumb {
+//   background: #e0e7ef;
+//   border-radius: 8px;
+// }
+// .brandLogoCard {
+//   background: #fff;
+//   border: 2px solid #e0e7ef;
+//   border-radius: 1rem;
+//   padding: 1.2rem 2.2rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   min-width: 120px;
+//   min-height: 80px;
+//   transition:
+//     box-shadow 0.18s,
+//     border 0.18s;
+//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+// }
+// .brandLogoCard img {
+//   max-width: 90px;
+//   max-height: 48px;
+//   object-fit: contain;
+//   filter: grayscale(0.7) brightness(0.8);
+//   transition: filter 0.18s;
+// }
+// .brandLogoCard:hover {
+//   border: 2px solid #ffb300;
+//   box-shadow: 0 4px 16px rgba(255, 179, 0, 0.08);
+// }
+// .brandLogoCard:hover img {
+//   filter: grayscale(0.2) brightness(1);
+// }
+
+// .whatsGreatSection {
+//   position: relative;
+//   padding: 3.5rem 0 2.7rem 0;
+//   margin: 2.5rem 0 2rem 0;
+//   background: repeating-linear-gradient(
+//     120deg,
+//     #f7f7f8 0 40px,
+//     #f3f4f6 40px 80px
+//   );
+//   overflow: hidden;
+// }
+// .whatsGreatHeading {
+//   text-align: center;
+//   font-size: 2rem;
+//   font-weight: 700;
+//   color: #232323;
+//   margin-bottom: 0.5rem;
+//   letter-spacing: 0.01em;
+// }
+// .whatsGreatSubtitle {
+//   text-align: center;
+//   font-size: 1.13rem;
+//   color: #666;
+//   margin-bottom: 2.2rem;
+// }
+// .whatsGreatFeatures {
+//   display: flex;
+//   justify-content: center;
+//   gap: 2.2rem;
+//   max-width: 950px;
+//   margin: 0 auto;
+//   flex-wrap: wrap;
+// }
+// .whatsGreatFeature {
+//   background: #fff;
+//   border-radius: 16px;
+//   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+//   padding: 2.1rem 1.7rem 1.5rem 1.7rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-align: center;
+//   color: #232323;
+//   min-width: 220px;
+//   max-width: 320px;
+//   flex: 1 1 220px;
+//   transition:
+//     box-shadow 0.15s,
+//     transform 0.15s;
+//   border: 1px solid #ececec;
+//   position: relative;
+//   z-index: 1;
+//   &:hover {
+//     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+//     transform: translateY(-4px) scale(1.03);
+//   }
+//   h4 {
+//     font-size: 1.15rem;
+//     font-weight: 600;
+//     margin-bottom: 0.5rem;
+//     color: #232323;
+//   }
+//   p {
+//     font-size: 1rem;
+//     color: #444;
+//     margin: 0;
+//   }
+// }
+// .icon {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 0.8rem;
+// }
+// @media (max-width: 900px) {
+//   .whatsGreatFeatures {
+//     flex-direction: column;
+//     gap: 1.5rem;
+//     align-items: center;
+//   }
+//   .whatsGreatFeature {
+//     min-width: 0;
+//     width: 100%;
+//     max-width: 400px;
+//   }
+// }

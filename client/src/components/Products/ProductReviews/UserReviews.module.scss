@@ -1,0 +1,100 @@
+.userReviews {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.userReviews h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.userReviews ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviewSection {
+  margin-top: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  width: 100%;
+}
+
+.reviewTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-text-main);
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.reviewItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.reviewContent {
+  flex: 1;
+}
+
+.reviewerName {
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.1rem;
+}
+
+.stars {
+  color: #f5c518;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.reviewDate {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-left: 0.7rem;
+}
+
+.reviewText {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+}
+
+.noReviews {
+  color: #888;
+  font-style: italic;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 8px;
+}

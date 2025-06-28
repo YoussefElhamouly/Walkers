@@ -1,0 +1,41 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.statCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  .info {
+    p {
+      margin: 0;
+      color: #a0aec0;
+    }
+    h3 {
+      margin: 0.25rem 0;
+      font-size: 1.75rem;
+    }
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  background: #e2e8f0;
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

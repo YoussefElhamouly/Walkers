@@ -1,0 +1,28 @@
+.cartPage {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+}
+.cartItemsSection {
+  flex: 2 1 0;
+  min-width: 0;
+}
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .cartPage {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .cartItemsSection {
+    width: 100%;
+  }
+}

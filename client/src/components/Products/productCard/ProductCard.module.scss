@@ -1,0 +1,171 @@
+// components/ProductCard/ProductCard.module.scss
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 300px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  min-height: 300px;
+  overflow: hidden;
+  background: #fff;
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+.description {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.imageWrapper {
+  width: 100%;
+  height: 250px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0rem 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: rgba(220, 38, 38, 0.6); /* faded red */
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.stars {
+  margin-top: auto;
+  color: #ffcc00;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.discountBadge {
+  background: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.5rem;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.skeletonCard {
+  @extend .card;
+  background: #f3f3f3;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 250px;
+  background: #e0e0e0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+}
+
+.skeletonContent {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeletonTitle {
+  width: 70%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeletonPriceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skeletonPrice,
+.skeletonOldPrice,
+.skeletonDiscountBadge {
+  height: 18px;
+  border-radius: 4px;
+  background: #e0e0e0;
+}
+.skeletonPrice {
+  width: 40px;
+}
+.skeletonOldPrice {
+  width: 35px;
+}
+.skeletonDiscountBadge {
+  width: 32px;
+}
+
+.skeletonStars {
+  width: 60px;
+  height: 16px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin: 0.5rem 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

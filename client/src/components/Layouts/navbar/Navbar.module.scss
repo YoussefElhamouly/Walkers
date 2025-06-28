@@ -1,0 +1,100 @@
+@use '../../../styles/mixins.scss' as *;
+@use '../../../styles/vars' as *;
+
+// Progress Bar Styles
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  z-index: calc(var(--navbar-z) + 1);
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #000000;
+  transition: width 0.1s ease;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--navbar-z);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: white;
+  border-bottom: 1px solid var(--color-border);
+
+  // font-family: sans-serif;
+}
+
+.logo {
+  // opacity: 0.8;
+  width: 65px;
+  height: 65px;
+  margin-right: var(--spacing-lg);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.navLink {
+  all: unset;
+  @include flex-center;
+  gap: var(--spacing-xs);
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+  // padding-bottom: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.linksActive {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 80%;
+    height: 1px;
+    border-radius: 20em;
+    margin: 0 auto;
+    background-color: var(--color-secondary);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+}
+
+.iconWrapper {
+  margin-right: var(--spacing-xs);
+  width: 18px;
+  height: 18px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

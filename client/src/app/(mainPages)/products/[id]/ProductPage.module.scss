@@ -1,0 +1,382 @@
+.productPageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.productPage {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.detailsSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.productTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.model {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.rating {
+  color: #f5c518;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #f28b82;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-right: 0.7rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-right: 0.7rem;
+}
+
+.discountBadge {
+  background: #fde8e8;
+  color: #e53935;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 0.2rem 0.9rem;
+  margin-left: 0.5rem;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.description {
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.variantSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+
+  span {
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+}
+
+.variants {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.variantBtn {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 3px;
+  background: #fff;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s;
+  cursor: pointer;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f5f5f5;
+  }
+}
+
+.variantBtn.active,
+.variantBtn:focus {
+  border: 2px solid #222;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  span {
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.quantity {
+  min-width: 32px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.addToCart {
+  font-size: 1.2rem !important;
+  padding: 1rem !important;
+  width: 230px;
+}
+
+.buyNow {
+  font-size: 1.2rem !important;
+  padding: 1rem !important;
+  width: 230px;
+  // background-color: #313131 !important;
+}
+
+.reviewSection {
+  margin-top: 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  width: 100%;
+}
+
+.reviewTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-text-main);
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.reviewItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  // background: var(--color-bg-lighter);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  // background: #e0e7ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.reviewContent {
+  flex: 1;
+}
+
+.reviewerName {
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.1rem;
+}
+
+.stars {
+  color: #f5c518;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.reviewDate {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-left: 0.7rem;
+}
+
+.reviewText {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+}
+
+.skeletonGallery {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.skeletonMainImage {
+  width: 100%;
+  height: 23vw;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonThumbnails {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.skeletonThumbnail {
+  width: 150px;
+  height: 100px;
+  background: #ececec;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonTitle {
+  width: 320px;
+  height: 32px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonBrand {
+  width: 120px;
+  height: 20px;
+  background: #ececec;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonRating {
+  width: 100px;
+  height: 20px;
+  background: #f5c518;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  opacity: 0.3;
+  animation: pulse 1.5s infinite;
+}
+.skeletonPriceRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.skeletonOldPrice {
+  width: 80px;
+  height: 24px;
+  background: #f28b82;
+  border-radius: 6px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonPrice {
+  width: 90px;
+  height: 28px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonDescription1 {
+  width: 380px;
+  height: 20px;
+  background: #ececec;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonDescription2 {
+  width: 320px;
+  height: 20px;
+  background: #ececec;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonButtonRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.skeletonButton {
+  width: 120px;
+  height: 44px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonReviewTitle {
+  width: 180px;
+  height: 24px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ececec;
+  animation: pulse 1.5s infinite;
+}
+.skeletonReviewerName {
+  width: 120px;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  animation: pulse 1.5s infinite;
+}
+.skeletonReviewText {
+  width: 220px;
+  height: 16px;
+  background: #ececec;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
