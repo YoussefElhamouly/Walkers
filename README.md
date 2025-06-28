@@ -61,10 +61,13 @@ walker/
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img src="./assets/homepage.png" alt="Homepage" width="600"/>
+  <img src="./assets/homepage.png" alt="landing" width="600"/>
 </p>
 <p align="center">
-  <img src="./assets/footer.png" alt="Checkout" width="600"/>
+  <img src="./assets/whyus.png" alt="whyus" width="600"/>
+</p>
+<p align="center">
+  <img src="./assets/footer.png" alt="footer" width="600"/>
 </p>
 <p align="center">
   <img src="./assets/products.png" alt="Products" width="600"/>
