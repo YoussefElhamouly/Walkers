@@ -24,36 +24,36 @@
 
 ```
 walker/
-├── client/                          # Next.js Frontend
+├── client/
 │   ├── src/
-│   │   ├── app/                     # Next.js 13+ App Router
-│   │   │   ├── (adminPages)/        # Admin Dashboard Routes
-│   │   │   ├── (authPages)/         # Authentication Pages
-│   │   │   ├── (mainPages)/         # Main E-commerce Pages
+│   │   ├── app/
+│   │   │   ├── (adminPages)/
+│   │   │   ├── (authPages)/
+│   │   │   ├── (mainPages)/
 │   │   │   └── ...
-│   │   ├── components/              # Reusable UI Components
-│   │   │   ├── admin/               # Admin Dashboard Components
-│   │   │   ├── cart/                # Shopping Cart Components
-│   │   │   ├── HomePage/            # Homepage Sections
-│   │   │   ├── Layouts/             # Layout Components
-│   │   │   ├── Products/            # Product-related Components
-│   │   │   └── ui/                  # UI Components
-│   │   ├── styles/                  # Global Styles & SCSS
-│   │   └── utils/                   # Utility Functions
-│   ├── public/                      # Static Assets
+│   │   ├── components/
+│   │   │   ├── admin/
+│   │   │   ├── cart/
+│   │   │   ├── HomePage/
+│   │   │   ├── Layouts/
+│   │   │   ├── Products/
+│   │   │   └── ui/
+│   │   ├── styles/
+│   │   └── utils/
+│   ├── public/
 │   └── ...
 │
-├── server/                          # Express.js Backend
-│   ├── controllers/                 # Route Controllers
-│   ├── models/                      # MongoDB Schemas
-│   ├── middlewares/                 # Custom Middlewares
-│   ├── routes/                      # API Routes
-│   ├── uploads/                     # File Uploads
-│   ├── utils/                       # Utility Functions
-│   ├── redis/                       # Redis Configuration
-│   └── server.js                    # Main Server File
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   ├── middlewares/
+│   ├── routes/
+│   ├── uploads/
+│   ├── utils/
+│   ├── redis/
+│   └── server.js
 │
-└── assets/                          # Project Assets & Screenshots
+└── assets/
 ```
 
 ---
@@ -102,7 +102,7 @@ walker/
 
 ### Customer Features
 
-- **User Registration & Login** — Secure authentication with JWT
+- **User Registration & Login** — Secure session based authentication
 - **Product Browsing** — Advanced filtering, search, and categorization
 - **Shopping Cart** — Persistent cart with real-time updates
 - **Secure Checkout** — Payment integration with order confirmation
