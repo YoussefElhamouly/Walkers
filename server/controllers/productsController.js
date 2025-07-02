@@ -168,6 +168,18 @@ const getNewProducts = async (req, res, next) => {
   }
 };
 
+const getFeaturedProducts = async (req, res, next) => {
+  try {
+    const products = await Products.find({ isFeatured: true })
+      .sort({ createdAt: -1 })
+      .limit(4)
+      .lean();
+    res.status(200).json(products);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const loadImage = async (req, res, next) => {
   try {
     const { id, image } = req.params;
@@ -194,4 +206,5 @@ export {
   getProductById,
   getOnSaleProducts,
   getNewProducts,
+  getFeaturedProducts,
 };

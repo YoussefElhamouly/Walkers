@@ -1,7 +1,7 @@
 import '@/styles/globals.scss';
-import Navbar from '@/components/Layouts/navbar/Navbar';
 import { Poppins } from 'next/font/google';
-import Footer from '@/components/Layouts/footer/Footer';
+
+import { AuthProvider } from '@/contexts/AuthContext';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -17,15 +17,14 @@ export const metadata = {
     icon: '/favicon.ico', // or '/favicon.png'
   },
 };
+
 const Rootlayout = ({ children }) => {
   return (
     <html lang="en" className={poppins.className}>
       <body
         style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

@@ -6,6 +6,8 @@ import { Suspense } from 'react';
 import WhyShopWithUs from '@/components/HomePage/WhyShopWithUs/WhyShopWithUs';
 import FeaturedBrands from '@/components/HomePage/FeaturedBramds/FeaturedBrands';
 import OnSaleSection from '@/components/HomePage/OnSaleSection/OnSaleSection';
+import Navbar from '@/components/layouts/Navbar/Navbar';
+import Footer from '@/components/layouts/Footer/Footer';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
@@ -31,6 +33,7 @@ const HomePage = async () => {
   const onSaleProducts = await loadOnSaleProducts();
   return (
     <>
+      <Navbar />
       <Hero />
       <Suspense
         fallback={Array.from({ length: 4 }).map((_, index) => (
@@ -50,6 +53,7 @@ const HomePage = async () => {
         <OnSaleSection onSaleProducts={onSaleProducts} />
       </Suspense>
       <Testimonials />
+      <Footer />
     </>
   );
 };

@@ -12,12 +12,20 @@ const ProductCard = ({
   gallery,
   _id,
   description,
+  sizes,
 }) => {
   const hasDiscount = typeof discount === 'number' && discount > 0;
   const discountedPrice = hasDiscount ? price * (1 - discount / 100) : price;
 
+  // Get the first variant and first size for the URL
+  const firstVariant = (gallery?.[0]?.variant || '').toLowerCase();
+  const firstSize = (sizes?.[0] || '').toLowerCase();
+
+  // Build the URL with query parameters
+  const productUrl = `/products/${_id}?variant=${encodeURIComponent(firstVariant)}&size=${encodeURIComponent(firstSize)}`;
+
   return (
-    <Link className={styles.card} href={`/products/${_id}`}>
+    <Link className={styles.card} href={productUrl}>
       <div className={styles.imageWrapper}>
         <Image
           src={`/api/products/${_id}/loadImage/${gallery[0]?.images[0]?.fileName}`}

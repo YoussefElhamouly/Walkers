@@ -40,9 +40,9 @@ export default async function ProductPage({
     <div className={styles.productPageContainer}>
       <div className={styles.productPage}>
         <ProductGallery
-          key={selectedVariantIdx + product._id}
           images={product.gallery[selectedVariantIdx].images}
           _id={product._id}
+          selectedVariantIdx={selectedVariantIdx}
         />
         <div className={styles.detailsSection}>
           <h1 className={styles.productTitle}>{product.title}</h1>

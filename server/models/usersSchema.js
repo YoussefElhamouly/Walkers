@@ -23,7 +23,9 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, "Password is required"],
+      required: function () {
+        return !this.googleId; // Password only required if not using Google OAuth
+      },
       minlength: [6, "Password must be at least 6 characters long"],
     },
     firstName: {
@@ -45,6 +47,16 @@ const userSchema = new mongoose.Schema(
     },
     lastLogin: {
       type: Date,
+    },
+    // Google OAuth fields
+    googleId: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+    googleProfile: {
+      displayName: String,
+      picture: String,
     },
     createdAt: {
       type: Date,

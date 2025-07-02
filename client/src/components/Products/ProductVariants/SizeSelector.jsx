@@ -3,7 +3,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import styles from './SizeSelector.module.scss';
 
-const sizes = ['S', 'M', 'L', 'XL'];
+const sizes = ['s', 'm', 'l', 'xl'];
 
 export default function SizeSelector() {
   const router = useRouter();
@@ -11,13 +11,18 @@ export default function SizeSelector() {
   const sizeParam = searchParams.get('size');
   const variantParam = searchParams.get('variant');
   const [isLoading, setIsLoading] = useState(false);
-  const selectedSize = sizeParam || 'M';
+  const selectedSize = sizeParam || 'm';
 
   useEffect(() => {
     setIsLoading(false);
   }, [sizeParam]);
 
   const handleSizeClick = (size) => {
+    // Don't do anything if the same size is already selected
+    if (size === selectedSize) {
+      return;
+    }
+
     setIsLoading(true);
 
     const newSearchParams = new URLSearchParams(searchParams);
@@ -43,10 +48,10 @@ export default function SizeSelector() {
             key={size}
             className={`${styles.sizeBtn} ${selectedSize === size ? styles.active : ''}`}
             onClick={() => handleSizeClick(size)}
-            disabled={isLoading}
+            disabled={isLoading || selectedSize === size}
             aria-label={`Select size ${size}`}
           >
-            {size}
+            {size.toUpperCase()}
           </button>
         ))}
       </div>
